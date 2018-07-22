@@ -5,41 +5,64 @@ $fd-fonts: (
     "code": #{"'Courier New'", monospace},
 );
 
+:root{
+    --fd-colors-primary-1: #006fbb;
+    --fd-colors-primary-2: #27394f;
+    --fd-colors-action-1: #009cdf;
+    --fd-colors-action-2: #8D9DBC;
+    --fd-colors-text-1: #21262c;
+    --fd-colors-text-2: #7f90a4;
+    --fd-colors-text-3: #63758b;
+    --fd-colors-text-iverse-1: #ffffff;
+    --fd-colors-text-iverse-2: #f6f8f9;
+    --fd-colors-text-iverse-3: #eef1f3;
+    --fd-colors-background-1: #ffffff;
+    --fd-colors-background-2: #f0f5ff;
+    --fd-colors-background-3: #000000;
+    --fd-colors-neutral-1: #f9fbfc;
+    --fd-colors-neutral-2: #d7d7d7;
+    --fd-colors-neutral-3: #ccdaeb;
+    --fd-colors-neutral-4: #8a8fa1;
+    --fd-colors-status-1: #61bf33;
+    --fd-colors-status-2: #e97326;
+    --fd-colors-status-3: #df1919;
+}
+
 //colors
 $fd-colors: (
     "primary": (
-        1: #006fbb,
-        2: #27394f,
+        1: var(--fd-colors-primary-1, #006fbb),
+        2: var(--fd-colors-primary-2, #27394f),
     ),
     "action": (
-        1: #009cdf,
-        2: #8D9DBC
+        1: var(--fd-colors-action-1, #009cdf),
+        2: var(--fd-colors-action-2, #8D9DBC)
     ),
     "text": (
-        1: #21262c,
-        2: #7f90a4,
-        3: #63758b,
+        1: var(--fd-colors-text-1, #21262c),
+        2: var(--fd-colors-text-2, #7f90a4),
+        3: var(--fd-colors-text-3, #63758b),
     ),
     "text-inverse": (
-        1: #ffffff,
-        2: #f6f8f9,
-        3: #eef1f3,
+        1: var(--fd-colors-text-inverse-1, #ffffff),
+        2: var(--fd-colors-text-inverse-2, #f6f8f9),
+        3: var(--fd-colors-text-inverse-3, #eef1f3),
     ),
     "background": (
-        1: #ffffff,
-        2: #f0f5ff,
-        3: #000000
+        1: var(--fd-colors-background-1, #ffffff),
+        2: var(--fd-colors-background-2, #f0f5ff),
+        3: var(--fd-colors-background-3, #000000)
     ),
     "neutral": (
-        1: #f9fbfc,
-        2: #d7d7d7,
-        3: #ccdaeb,
-        4: #8a8fa1,
+        1: var(--fd-colors-neutral-1, #f9fbfc),
+        2: var(--fd-colors-neutral-2, #d7d7d7),
+        3: var(--fd-colors-neutral-3, #ccdaeb),
+        4: var(--fd-colors-neutral-4, #8a8fa1),
     ),
     "status": (
-        1: #61bf33,
-        2: #e97326,
-        3: #df1919,
+        1: var(--fd-colors-status-1, #61bf33),
+        2: var(--fd-colors-status-2, #e97326),
+        3: var(--fd-colors-status-3, #df1919),
     )
 );
 
