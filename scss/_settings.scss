@@ -3,34 +3,68 @@ $fd-namespace: fd !default;
 
 //breakpoints
 $fd-breakpoints: (
-    xs: 320px,
-    s: 800px,
-    m: 1024px,
-    l: 1440px,
-    xl: 1580px,
+  xs: 320px,
+  s: 800px,
+  m: 1024px,
+  l: 1440px,
+  xl: 1580px
 ) !default;
 
 //spacing
 $fd-spacing--base: 4px !default;
 $fd-spacing: () !default;
-$fd-spacing: map-merge((
-    base: $fd-spacing--base,    //4
-    xxs: $fd-spacing--base * 2,  //8
-    xs: $fd-spacing--base * 3,  //12
-    s: $fd-spacing--base * 4,   //16
-    reg: $fd-spacing--base * 5, //20
-    m: $fd-spacing--base * 8,  //32
-    l: $fd-spacing--base * 9,  //36
-    xl: $fd-spacing--base * 10, //40
-), $fd-spacing);
+$fd-spacing: map-merge(
+  (
+    base: $fd-spacing--base,
+    //4
+      xxs: $fd-spacing--base * 2,
+    //8
+      xs: $fd-spacing--base * 3,
+    //12
+      s: $fd-spacing--base * 4,
+    //16
+      reg: $fd-spacing--base * 5,
+    //20
+      m: $fd-spacing--base * 8,
+    //32
+      l: $fd-spacing--base * 9,
+    //36
+      xl: $fd-spacing--base * 10,
+    //40
+  ),
+  $fd-spacing
+);
 
 //fonts
 $fd-fonts: () !default;
-$fd-fonts: map-merge((
-    "body": #{"'72'", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
-    "header": #{"'72'", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
-    "code": #{monospace},
-), $fd-fonts);
+$fd-fonts: map-merge(
+  (
+    'body': #{"'72'",
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol'},
+    'header': #{"'72'",
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol'},
+    'code': #{monospace}
+  ),
+  $fd-fonts
+);
 
 //type
 //sets HTML el
@@ -38,80 +72,130 @@ $fd-font-size: 14px !default;
 $fd-line-height: 20/14 !default;
 $fd-type--base: 14 !default;
 $fd-type: () !default;
-$fd-type: map-merge((
-  "-3": #{11/$fd-type--base}rem 16/11 "body" reg none,  //11/16
-  "-2": #{12/$fd-type--base}rem 16/12 "body" reg none, //12/16
-  "-1": #{13/$fd-type--base}rem 16/13 "body" reg none,	//13/16
-  "0": #{14/$fd-type--base}rem 20/14 "body" reg none, //14/20
-  "1": #{16/$fd-type--base}rem 20/16 "body" reg none,  //16/20
-  "2": #{18/$fd-type--base}rem 24/18 "body" reg none, //18/24
-  "3": #{24/$fd-type--base}rem 32/24 "body" reg none, //23/32
-  "4": #{30/$fd-type--base}rem 36/30 "body" light none, //30/36
-  "5": #{48/$fd-type--base}rem 52/48 "header" reg none, //48/52
-), $fd-type);
+$fd-type: map-merge(
+  (
+    '-3': #{11 / $fd-type--base}rem 16/11 'body' reg none,
+    //11/16
+      '-2': #{12 / $fd-type--base}rem 16/12 'body' reg none,
+    //12/16
+      '-1': #{13 / $fd-type--base}rem 16/13 'body' reg none,
+    //13/16
+      '0': #{14 / $fd-type--base}rem 20/14 'body' reg none,
+    //14/20
+      '1': #{16 / $fd-type--base}rem 20/16 'body' reg none,
+    //16/20
+      '2': #{18 / $fd-type--base}rem 24/18 'body' reg none,
+    //18/24
+      '3': #{24 / $fd-type--base}rem 32/24 'body' reg none,
+    //23/32
+      '4': #{30 / $fd-type--base}rem 36/30 'body' light none,
+    //30/36
+      '5': #{48 / $fd-type--base}rem 52/48 'header' reg none,
+    //48/52
+  ),
+  $fd-type
+);
 
 //weights
 $fd-weights: () !default;
-$fd-weights: map-merge((
+$fd-weights: map-merge(
+  (
     light: 300,
     reg: 400,
     med: 500,
     semi: 600,
     bold: 700
-), $fd-weights);
+  ),
+  $fd-weights
+);
+
+:root {
+  --fd-colors-primary-1: #006fbb;
+  --fd-colors-primary-2: #27394f;
+  --fd-colors-action-1: #0a6ed1;
+  --fd-colors-action-2: #9ab7e1;
+  --fd-colors-text-1: #32363a;
+  --fd-colors-text-2: #515559;
+  --fd-colors-text-3: #6f7275;
+  --fd-colors-text-iverse-1: #ffffff;
+  --fd-colors-text-iverse-2: #ffffff;
+  --fd-colors-background-1: #f3f4f5;
+  --fd-colors-background-2: #f0f5ff;
+  --fd-colors-background-3: #000000;
+  --fd-colors-neutral-1: #fafafa;
+  --fd-colors-neutral-2: #eeeeef;
+  --fd-colors-neutral-3: #dededf;
+  --fd-colors-accent-1: #359c46;
+  --fd-colors-accent-2: #f59518;
+  --fd-colors-accent-3: #ee0000;
+  --fd-colors-accent-1: #ee0000;
+  --fd-colors-accent-2: #ee0000;
+  --fd-colors-accent-3: #ee0000;
+  --fd-colors-accent-4: #ee0000;
+  --fd-colors-accent-5: #ee0000;
+  --fd-colors-accent-6: #ee0000;
+  --fd-colors-accent-7: #ee0000;
+  --fd-colors-accent-8: #ee0000;
+  --fd-colors-accent-9: #ee0000;
+}
 
 //colors
 $fd-colors: () !default;
-$fd-colors: map-merge((
-  "action": (
-    1: #0a6ed1,
-    2: #9AB7E1
+$fd-colors: map-merge(
+  (
+    'action': (
+      1: var(--fd-colors-action-1, #0a6ed1),
+      2: var(--fd-colors-action-2, #9ab7e1)
+    ),
+    'text': (
+      1: var(--fd-colors-text-1, #32363a),
+      2: var(--fd-colors-text-2, #515559),
+      3: var(--fd-colors-text-3, #6f7275)
+    ),
+    'text-inverse': (
+      1: var(--fd-colors-text-inverse-1, #ffffff),
+      2: var(--fd-colors-text-inverse-2, #f5f5f5),
+      //consider removing
+        3: var(--fd-colors-text-inverse-3, #ebebeb),
+      //consider removing
+    ),
+    'background': (
+      1: var(--fd-colors-background-1, #f3f4f5),
+      2: var(--fd-colors-background-2, #ffffff)
+    ),
+    'neutral': (
+      1: var(--fd-colors-neutral-1, #fafafa),
+      2: var(--fd-colors-neutral-2, #eeeeef),
+      3: var(--fd-colors-neutral-3, #dededf)
+    ),
+    'status': (
+      1: var(--fd-colors-status-1, #359c46),
+      2: var(--fd-colors-status-2, #f59518),
+      3: var(--fd-colors-status-3, #ee0000)
+    ),
+    'accent': (
+      1: var(--fd-colors-accent-1, #5899da),
+      2: var(--fd-colors-accent-2, #ed4a7b),
+      3: var(--fd-colors-accent-3, #945ecf),
+      4: var(--fd-colors-accent-4, #13a4b4),
+      5: var(--fd-colors-accent-5, #7ca10c),
+      6: var(--fd-colors-accent-6, #bf399e),
+      7: var(--fd-colors-accent-7, #ee6868),
+      8: var(--fd-colors-accent-8, #686ddf),
+      9: var(--fd-colors-accent-9, #6c8893)
+    )
   ),
-  "text": (
-    1: #32363a,
-    2: #515559,
-    3: #6f7275,
-  ),
-  "text-inverse": (
-    1: #ffffff,
-    2: #f5f5f5, //consider removing
-    3: #ebebeb, //consider removing
-  ),
-  "background": (
-    1: #f3f4f5,
-    2: #ffffff
-  ),
-  "neutral": (
-    1: #fafafa,
-    2: #eeeeef,
-    3: #dededf
-  ),
-  "status": (
-    1: #359c46,
-    2: #f59518,
-    3: #ee0000,
-  ),
-  "accent": (
-    1: #5899da,
-    2: #ed4a7b,
-    3: #945ecf,
-    4: #13a4b4,
-    5: #7ca10c,
-    6: #bf399e,
-    7: #ee6868,
-    8: #686ddf,
-    9: #6c8893,
-  )
-), $fd-colors);
+  $fd-colors
+);
 
-$fd-colors-primary: map-get($fd-colors, "primary") !default;
-$fd-colors-action: map-get($fd-colors, "action") !default;
-$fd-colors-text: map-get($fd-colors, "text") !default;
-$fd-colors-text-inverse: map-get($fd-colors, "text-inverse") !default;
-$fd-colors-background: map-get($fd-colors, "background") !default;
-$fd-colors-neutral: map-get($fd-colors, "neutral") !default;
-$fd-colors-status: map-get($fd-colors, "status") !default;
-$fd-colors-accent: map-get($fd-colors, "accent") !default;
+$fd-colors-primary: map-get($fd-colors, 'primary') !default;
+$fd-colors-action: map-get($fd-colors, 'action') !default;
+$fd-colors-text: map-get($fd-colors, 'text') !default;
+$fd-colors-text-inverse: map-get($fd-colors, 'text-inverse') !default;
+$fd-colors-background: map-get($fd-colors, 'background') !default;
+$fd-colors-neutral: map-get($fd-colors, 'neutral') !default;
+$fd-colors-status: map-get($fd-colors, 'status') !default;
+$fd-colors-accent: map-get($fd-colors, 'accent') !default;
 
 //features
 $fd-space-modify: normal !default; //normal, compact
@@ -126,11 +210,11 @@ $fd-max-width--ui: 1290px !default;
 $fd-width--gutter: $fd-spacing--base * 6 !default;
 
 //type
-$fd-font-family: map-get($fd-fonts, "body") !default;
-$fd-font-family--header: map-get($fd-fonts, "header") !default;
-$fd-font-family--code: map-get($fd-fonts, "code") !default;
-$fd-font-size: nth(map-get($fd-type, "0"), 1) !default;
-$fd-line-height: nth(map-get($fd-type, "0"), 2) !default;
+$fd-font-family: map-get($fd-fonts, 'body') !default;
+$fd-font-family--header: map-get($fd-fonts, 'header') !default;
+$fd-font-family--code: map-get($fd-fonts, 'code') !default;
+$fd-font-size: nth(map-get($fd-type, '0'), 1) !default;
+$fd-line-height: nth(map-get($fd-type, '0'), 2) !default;
 
 //baseline
 $fd-color: map-get($fd-colors-text, 1) !default;
@@ -140,7 +224,7 @@ $fd-background-color--sidebar: map-get($fd-colors-background, 2) !default;
 $fd-background-color--footer: map-get($fd-colors-background, 2) !default;
 
 //positioning
-$fd-margin-bottom: map-get($fd-spacing, "xs") !default;
+$fd-margin-bottom: map-get($fd-spacing, 'xs') !default;
 
 //states
 $fd-color--error: map-get($fd-colors-status, 3) !default;
@@ -176,8 +260,6 @@ $fd-forms-color--active: map-get($fd-colors-action, 1) !default;
 $fd-forms-background-color: map-get($fd-colors-background, 2) !default;
 $fd-forms-background-color--disabled: map-get($fd-colors-neutral, 1) !default;
 
-
-
 $fd-forms-background-color--check: map-get($fd-colors-action, 1) !default;
 $fd-forms-background-color--check-disabled: map-get($fd-colors-text, 2) !default;
 //
@@ -190,11 +272,11 @@ $fd-forms-border-color--disabled: lighten(map-get($fd-colors-neutral, 3), 5%) !d
 //elements
 $fd-forms-select-width--background-image: 12px !default;
 
-$fd-forms-select-background-image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMyMTI2MkMiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNi4yMzYgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzYuMjM2IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+" !default;
-$fd-forms-select-background-image--expanded: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxMHB4IiB2aWV3Qm94PSIwIDAgMTIgMTAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ5LjMgKDUxMTY3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5VbnRpdGxlZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJkb3dubG9hZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNi4wMDAwMDAsIDUuMDAwMDAwKSByb3RhdGUoLTE4MC4wMDAwMDApIHRyYW5zbGF0ZSgtNi4wMDAwMDAsIC01LjAwMDAwMCkgIiBmaWxsPSIjMjEyNjJDIj4KICAgICAgICAgICAgPHBhdGggZD0iTTExLjkzNSwyLjQ3NSBMNi4xODgsOC45MjcgQzYuMTM4MzEzODQsOC45Nzc5NDY4NyA2LjA3MDE2Mzg4LDkuMDA2Njc2OTEgNS45OTksOS4wMDY2NzY5MSBDNS45Mjc4MzYxMiw5LjAwNjY3NjkxIDUuODU5Njg2MTYsOC45Nzc5NDY4NyA1LjgxLDguOTI3IEwwLjA2NSwyLjQ3NSBDMC4wMjEwMzMzNzczLDIuNDI2OTMzNjMgLTAuMDAxMTEwMzExODMsMi4zNjI4MzE4NyAwLjAwMzgxMzQxNzEyLDIuMjk3ODc2NTMgQzAuMDA4NzM3MTQ2MDcsMi4yMzI5MjExOCAwLjA0MDI5MDM0NzcsMi4xNzI4ODk3NSAwLjA5MSwyLjEzMiBMMS4zODEsMS4wNTggQzEuNDI2NjkwMywxLjAxOTc1MjI1IDEuNDg0NDE0MTUsMC45OTg4NTgzMzkgMS41NDQsMC45OTkgTDEuNTYzLDEgQzEuNjI4OTQzNzMsMS4wMDQ4MDMxNSAxLjY5MDM1ODEyLDEuMDM1MzMwNzggMS43MzQsMS4wODUgTDUuOTk5LDUuOTY1IEwxMC4yNjYsMS4wODUgQzEwLjM1NjM3MjUsMC45ODE1ODQ0MTYgMTAuNTEyOTEyNiwwLjk2OTU3NzA4NSAxMC42MTgsMS4wNTggTDExLjkwOSwyLjEzMiBDMTEuOTU5LDIuMTc0IDExLjk5LDIuMjM0IDExLjk5NSwyLjI5OCBDMTIuMDAwMjA5MSwyLjM2Mjc0Mjc4IDExLjk3ODUwNDksMi40MjY3NzA0NCAxMS45MzUsMi40NzUgWiIgaWQ9IlNoYXBlIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=" !default;
-$fd-forms-select-background-image--active: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMwMDhGRDIiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNi4yMzYgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzYuMjM2IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+" !default;
-$fd-forms-select-background-image--active-expanded: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMwMDhGRDIiIGQ9Ik0xMS45MzUgNi41M0w2LjE4OC4xMDRhLjI2NC4yNjQgMCAwIDAtLjM3OCAwTC4wNjUgNi41M2EuMjQuMjQgMCAwIDAtLjA2MS4xNzcuMjM3LjIzNyAwIDAgMCAuMDg3LjE2NWwxLjI5IDEuMDcxYS4yNTguMjU4IDAgMCAwIC4xNjMuMDU4TDEuNTYzIDhhLjI1Mi4yNTIgMCAwIDAgLjE3MS0uMDg1bDQuMjY1LTQuODYxIDQuMjY3IDQuODYxYy4wNDMuMDQ5LjEwNC4wOC4xNy4wODVhLjI2MS4yNjEgMCAwIDAgLjE4Mi0uMDU3bDEuMjkxLTEuMDcxYS4yMzYuMjM2IDAgMCAwIC4wMjYtLjM0MnoiLz48L3N2Zz4=" !default;
-$fd-forms-select-background-image--disabled: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiM2Mzc1OEIiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNS4yMzUgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzQuMjM0IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+" !default;
+$fd-forms-select-background-image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMyMTI2MkMiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNi4yMzYgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzYuMjM2IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+' !default;
+$fd-forms-select-background-image--expanded: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxMHB4IiB2aWV3Qm94PSIwIDAgMTIgMTAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ5LjMgKDUxMTY3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5VbnRpdGxlZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJkb3dubG9hZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNi4wMDAwMDAsIDUuMDAwMDAwKSByb3RhdGUoLTE4MC4wMDAwMDApIHRyYW5zbGF0ZSgtNi4wMDAwMDAsIC01LjAwMDAwMCkgIiBmaWxsPSIjMjEyNjJDIj4KICAgICAgICAgICAgPHBhdGggZD0iTTExLjkzNSwyLjQ3NSBMNi4xODgsOC45MjcgQzYuMTM4MzEzODQsOC45Nzc5NDY4NyA2LjA3MDE2Mzg4LDkuMDA2Njc2OTEgNS45OTksOS4wMDY2NzY5MSBDNS45Mjc4MzYxMiw5LjAwNjY3NjkxIDUuODU5Njg2MTYsOC45Nzc5NDY4NyA1LjgxLDguOTI3IEwwLjA2NSwyLjQ3NSBDMC4wMjEwMzMzNzczLDIuNDI2OTMzNjMgLTAuMDAxMTEwMzExODMsMi4zNjI4MzE4NyAwLjAwMzgxMzQxNzEyLDIuMjk3ODc2NTMgQzAuMDA4NzM3MTQ2MDcsMi4yMzI5MjExOCAwLjA0MDI5MDM0NzcsMi4xNzI4ODk3NSAwLjA5MSwyLjEzMiBMMS4zODEsMS4wNTggQzEuNDI2NjkwMywxLjAxOTc1MjI1IDEuNDg0NDE0MTUsMC45OTg4NTgzMzkgMS41NDQsMC45OTkgTDEuNTYzLDEgQzEuNjI4OTQzNzMsMS4wMDQ4MDMxNSAxLjY5MDM1ODEyLDEuMDM1MzMwNzggMS43MzQsMS4wODUgTDUuOTk5LDUuOTY1IEwxMC4yNjYsMS4wODUgQzEwLjM1NjM3MjUsMC45ODE1ODQ0MTYgMTAuNTEyOTEyNiwwLjk2OTU3NzA4NSAxMC42MTgsMS4wNTggTDExLjkwOSwyLjEzMiBDMTEuOTU5LDIuMTc0IDExLjk5LDIuMjM0IDExLjk5NSwyLjI5OCBDMTIuMDAwMjA5MSwyLjM2Mjc0Mjc4IDExLjk3ODUwNDksMi40MjY3NzA0NCAxMS45MzUsMi40NzUgWiIgaWQ9IlNoYXBlIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=' !default;
+$fd-forms-select-background-image--active: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMwMDhGRDIiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNi4yMzYgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzYuMjM2IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+' !default;
+$fd-forms-select-background-image--active-expanded: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMwMDhGRDIiIGQ9Ik0xMS45MzUgNi41M0w2LjE4OC4xMDRhLjI2NC4yNjQgMCAwIDAtLjM3OCAwTC4wNjUgNi41M2EuMjQuMjQgMCAwIDAtLjA2MS4xNzcuMjM3LjIzNyAwIDAgMCAuMDg3LjE2NWwxLjI5IDEuMDcxYS4yNTguMjU4IDAgMCAwIC4xNjMuMDU4TDEuNTYzIDhhLjI1Mi4yNTIgMCAwIDAgLjE3MS0uMDg1bDQuMjY1LTQuODYxIDQuMjY3IDQuODYxYy4wNDMuMDQ5LjEwNC4wOC4xNy4wODVhLjI2MS4yNjEgMCAwIDAgLjE4Mi0uMDU3bDEuMjkxLTEuMDcxYS4yMzYuMjM2IDAgMCAwIC4wMjYtLjM0MnoiLz48L3N2Zz4=' !default;
+$fd-forms-select-background-image--disabled: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI5Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiM2Mzc1OEIiIGQ9Ik0xMS45MzUgMS40NzVMNi4xODggNy45MjdhLjI2NC4yNjQgMCAwIDEtLjM3OCAwTC4wNjUgMS40NzVhLjIzNS4yMzUgMCAwIDEgLjAyNi0uMzQzTDEuMzgxLjA1OGEuMjUzLjI1MyAwIDAgMSAuMTYzLS4wNTlMMS41NjMgMGEuMjUyLjI1MiAwIDAgMSAuMTcxLjA4NWw0LjI2NSA0Ljg4IDQuMjY3LTQuODhhLjI1Mi4yNTIgMCAwIDEgLjM1Mi0uMDI3bDEuMjkxIDEuMDc0Yy4wNS4wNDIuMDgxLjEwMi4wODYuMTY2YS4yMzQuMjM0IDAgMCAxLS4wNi4xNzd6Ii8+PC9zdmc+' !default;
 
 //menus and lists and navs
 $fd-menu-border-color: red !default;
@@ -203,21 +285,22 @@ $fd-menu-box-shadow: 0 0 4px 1px rgba(map-get($fd-colors-neutral, 2), 1) !defaul
 $fd-menu-z-index: 2 !default;
 $fd-menu-border-color: transparent !default;
 $fd-menu-title-color: map-get($fd-colors-text, 3) !default;
-$fd-menu-title-padding: map-get($fd-spacing, "xxs") !default;
+$fd-menu-title-padding: map-get($fd-spacing, 'xxs') !default;
 $fd-menu-title-background-color: map-get($fd-colors-neutral, 1) !default;
 $fd-menu-item-color: map-get($fd-colors-text, 2) !default;
-$fd-menu-item-background-color--selected: rgba(map-get($fd-colors-action, 1), .07) !default;
+$fd-menu-item-background-color--selected: rgba(map-get($fd-colors-action, 1), 0.07) !default;
 $fd-menu-item-background-color--hover: map-get($fd-colors-neutral, 2) !default;
 $fd-menu-item-color--hover: map-get($fd-colors-text, 2) !default;
-$fd-menu-item-padding-x: map-get($fd-spacing, "reg") !default;
-$fd-menu-item-padding-y: map-get($fd-spacing, "xs") - 2px !default;
+$fd-menu-item-padding-x: map-get($fd-spacing, 'reg') !default;
+$fd-menu-item-padding-y: map-get($fd-spacing, 'xs') - 2px !default;
 $fd-menu-link-color: $fd-link-color !default;
 $fd-menu-link-color--disabled: map-get($fd-colors-text, 3) !default;
 
 $fd-menu-transition-params: $fd-animation--speed ease-in !default;
 
-$fd-elements-inputs--text: "input[type=text]", "input[type=password]", "input[type=email]", "input[type=url]", "input[type=search]", "input[type=tel]", "input[type=number]", "input[type=date]";
-$fd-elements-inputs--check: "input[type=radio]", "input[type=checkbox]";
+$fd-elements-inputs--text: 'input[type=text]', 'input[type=password]', 'input[type=email]', 'input[type=url]',
+  'input[type=search]', 'input[type=tel]', 'input[type=number]', 'input[type=date]';
+$fd-elements-inputs--check: 'input[type=radio]', 'input[type=checkbox]';
 
 //animation
 $fd-forms-transition-params: $fd-animation--speed ease-in !default;
